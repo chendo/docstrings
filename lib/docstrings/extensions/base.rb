@@ -3,13 +3,8 @@ module DocStrings
     module Base
       module MethodExtension
         def docstring
-          path, line_number = source_location
-
-          if path && File.exists?(path)
-            file = File.read(path)
-
-            # FIXME: This will work terribly for large files
-            if file =~ Regexp.new(%Q{\\A(?:.*?\n){#{line_number}}\s*?"""([\\s\\S]+?)"""})
+          if respond_to?(:source)
+            if source =~ Regexp.new(%Q{"""([\\s\\S]+?)"""})
               $1.gsub(/\n\s+/, "\n").strip
             end
           end

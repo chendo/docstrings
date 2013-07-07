@@ -1,6 +1,7 @@
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
 
 require "docstrings/version"
+require "method_source"
 require "docstrings/extensions/base"
 
 module DocStrings
