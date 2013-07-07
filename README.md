@@ -2,6 +2,20 @@
 
 DocStrings allows you to define and access Python-like docstrings in Ruby.
 
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'docstrings'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install docstrings
+
 ## Usage
 
 ```ruby
@@ -67,19 +81,7 @@ puts RubyVM::InstructionSequence.of(method(:with_docstring)).disasm
 
 See https://eval.in/36676
 
-## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'docstrings'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install docstrings
 
 
 ## Contributing
