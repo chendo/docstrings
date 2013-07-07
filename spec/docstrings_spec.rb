@@ -1,11 +1,24 @@
 require 'spec_helper'
 
 describe Docstrings do
-  it 'should have a version number' do
-    Docstrings::VERSION.should_not be_nil
+  class TestClass
+    def no_docstring
+    end
+
+    def simple_docstring
+      """Simple"""
+    end
   end
 
-  it 'should do something useful' do
-    false.should be_true
+  def docstring_for_method(method_name)
+    TestClass.instance_method(method_name).docstring
+  end
+
+  it "works with simple docstrings" do
+    docstring_for_method(:simple_docstring).should == "Simple"
+  end
+
+  it "returns nil when no docstring" do
+    docstring_for_method(:no_docstring).should be_nil
   end
 end
