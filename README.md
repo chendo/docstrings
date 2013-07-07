@@ -51,7 +51,7 @@ So `"""Foo"""` simply evaluates to `"Foo"`, and all this gem does is define a me
 
 ## Wouldn't this cause a performance hit every time the method is called?
 
-Nope! At least, not in CRuby. Ruby is smart enough to recognise when string literals aren't actually used, and will skip generating bytecode for it.
+Nope! At least, not in CRuby. Ruby is smart enough to recognise when string literals aren't actually used, and will skip generating bytecode for it. Thanks to @charliesome for pointing this out.
 
 ```ruby
 def no_docstring
