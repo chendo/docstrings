@@ -2,6 +2,8 @@
 
 DocStrings allows you to define and access Python-like docstrings in Ruby.
 
+[![Build Status](https://travis-ci.org/chendo/docstrings.png)](https://travis-ci.org/chendo/docstrings)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -81,8 +83,11 @@ puts RubyVM::InstructionSequence.of(method(:with_docstring)).disasm
 
 See https://eval.in/36676
 
+## Compatibility
 
-
+* Ruby 1.9.x, 2.x
+* JRuby 1.9 mode
+* Rubinus 1.9 mode
 
 ## Contributing
 
