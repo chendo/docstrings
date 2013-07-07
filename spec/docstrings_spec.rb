@@ -1,12 +1,19 @@
 require 'spec_helper'
 
-describe Docstrings do
+describe DocStrings do
   class TestClass
     def no_docstring
     end
 
-    def simple_docstring
+    def simple
       """Simple"""
+    end
+
+    def multi_line
+      """
+        Line 1
+        Line 2
+      """
     end
   end
 
@@ -15,10 +22,14 @@ describe Docstrings do
   end
 
   it "works with simple docstrings" do
-    docstring_for_method(:simple_docstring).should == "Simple"
+    docstring_for_method(:simple).should == "Simple"
   end
 
   it "returns nil when no docstring" do
     docstring_for_method(:no_docstring).should be_nil
+  end
+
+  it "works with multiline docstrings" do
+    docstring_for_method(:multi_line).should == "Line 1\nLine 2"
   end
 end
