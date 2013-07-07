@@ -5,11 +5,11 @@ require 'docstrings/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "docstrings"
-  spec.version       = Docstrings::VERSION
+  spec.version       = DocStrings::VERSION
   spec.authors       = ["Jack Chen (chendo)"]
-  spec.email         = ["github@chen.do"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.email         = ["gems+docstrings@chen.do"]
+  spec.description   = %q{docstrings is a gem that adds the ability to use Python-like docstrings}
+  spec.summary       = %q{docstrings allows you to define and access docstrings on methods in Ruby}
   spec.homepage      = ""
   spec.license       = "MIT"
 
